@@ -2,59 +2,106 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Almadni Quranic Academy</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   </head>
   <body>
     <header class="header">
-      <h1>Almadni Quranic Academy</h1>
+      <img
+        src="images/logo.svg"
+        alt="Almadni Quranic Academy Logo"
+        height="50"
+      />
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="courses.html">Courses</a>
         <a href="teachers.html">Teachers</a>
+        <a href="enroll.html">Enroll</a>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
 
-    <section>
-      <h2>Contact Us</h2>
+    <section style="text-align: center; padding: 50px 20px">
+      <h1>Contact Almadni Quranic Academy</h1>
       <p>
-        Get in touch with Almadni Quranic Academy to start your Quran learning
-        journey. We offer free trial classes for students of all ages.
+        Have questions? Contact us via WhatsApp or fill the form below and we
+        will respond promptly.
       </p>
     </section>
 
     <section class="contact-form">
-      <form>
-        <input type="text" placeholder="Full Name" required />
-        <input type="number" placeholder="Age" required />
-        <input type="text" placeholder="WhatsApp Number" required />
-        <input type="email" placeholder="Email Address" />
-        <select required>
-          <option value="">Select Course</option>
-          <option>Noorani Qaida</option>
-          <option>Quran with Tajweed</option>
-          <option>Hifz-ul-Quran</option>
-          <option>Islamic Studies</option>
-          <option>Arabic Basics</option>
-        </select>
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit" class="btn">Submit</button>
+      <div id="successMessage" class="success-message">
+        ✅ Thank you! Your message is ready. You’ll be redirected to WhatsApp.
+      </div>
+      <div id="errorMessage" class="error-message">
+        ❌ Please fill all required fields correctly.
+      </div>
+
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input
+          type="text"
+          name="whatsapp"
+          placeholder="WhatsApp Number"
+          required
+        />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send via WhatsApp</button>
       </form>
     </section>
 
-    <section>
-      <p><strong>Email:</strong> info@almadniquranacademy.com</p>
-      <p><strong>WhatsApp:</strong> +92 3167577929</p>
-      <p><strong>Classes:</strong> Online – Worldwide</p>
-    </section>
-
     <footer>
-      <p>© 2025 Almadni Quranic Academy | Online Quran Learning</p>
+      <p>© 2025 Almadni Quranic Academy | Online Quran Learning Worldwide</p>
     </footer>
-    <a href="https://wa.me/923167577929" class="whatsapp-btn" target="_blank">
-      WhatsApp
-    </a>
+
+    <a href="https://wa.me/923001234567" class="whatsapp-btn" target="_blank"
+      >WhatsApp</a
+    >
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          let name = document.querySelector('[name="name"]').value.trim();
+          let email = document.querySelector('[name="email"]').value.trim();
+          let whatsapp = document
+            .querySelector('[name="whatsapp"]')
+            .value.trim();
+          let message = document.querySelector('[name="message"]').value.trim();
+
+          let successBox = document.getElementById("successMessage");
+          let errorBox = document.getElementById("errorMessage");
+
+          successBox.style.display = "none";
+          errorBox.style.display = "none";
+
+          if (!name || !email || !whatsapp || !message) {
+            errorBox.style.display = "block";
+            return;
+          }
+          if (!/^[0-9]{10,15}$/.test(whatsapp)) {
+            errorBox.style.display = "block";
+            errorBox.textContent =
+              "❌ Enter a valid WhatsApp number (numbers only).";
+            return;
+          }
+
+          successBox.style.display = "block";
+          let text = `New Contact Message – Almadni Quranic Academy\n\nName: ${name}\nEmail: ${email}\nWhatsApp: ${whatsapp}\nMessage:\n${message}`;
+          let phoneNumber = "923001234567"; // Replace with your WhatsApp number
+          let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+            text
+          )}`;
+          setTimeout(() => {
+            window.open(whatsappURL, "_blank");
+            document.getElementById("contactForm").reset();
+          }, 1500);
+        });
+    </script>
   </body>
 </html>
