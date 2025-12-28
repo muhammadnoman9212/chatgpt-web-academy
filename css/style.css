@@ -118,3 +118,16 @@ footer {
 .contact-form textarea {
   height: 100px;
 }
+.contact-form button {
+  background: #c9a24d;
+  color: #0b3d2e;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background: #b18e44;
+}
