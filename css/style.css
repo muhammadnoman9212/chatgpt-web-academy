@@ -41,15 +41,17 @@ body {
 }
 
 .btn {
-  background: #c9a24d;
-  color: #0b3d2e;
-  padding: 12px 25px;
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+    background: #C9A24D;
+    color: #0B3D2E;
+    padding: 14px 28px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }
+
 .hero-buttons {
   margin-top: 25px;
 }
