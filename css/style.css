@@ -124,11 +124,13 @@ section p {
 
 /* FOOTER */
 footer {
-  background: #0b3d2e;
-  color: white;
-  text-align: center;
-  padding: 15px;
+    background: #0B3D2E;
+    color: #eee;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
 }
+/* CONTACT FORM */
 
 .contact-form form {
   max-width: 500px;
