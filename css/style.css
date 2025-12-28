@@ -1,102 +1,120 @@
 body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    background: #F9F7F3;
-    color: #2B2B2B;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: #f9f7f3;
+  color: #2b2b2b;
 }
 
 /* HEADER */
 .header {
-    background: #0B3D2E;
-    color: white;
-    padding: 15px;
-    text-align: center;
+  background: #0b3d2e;
+  color: white;
+  padding: 15px;
+  text-align: center;
 }
 
 .header nav a {
-    color: #C9A24D;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
+  color: #c9a24d;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* HERO */
 .hero {
-    padding: 60px 20px;
-    text-align: center;
-    background: #0B3D2E;
-    color: white;
+  padding: 60px 20px;
+  text-align: center;
+  background: #0b3d2e;
+  color: white;
 }
 
 .hero h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 32px;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
 }
 
 .btn {
-    background: #C9A24D;
-    color: #0B3D2E;
-    padding: 12px 25px;
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+  background: #c9a24d;
+  color: #0b3d2e;
+  padding: 12px 25px;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 .hero-buttons {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .btn-outline {
-    border: 2px solid #C9A24D;
-    color: #C9A24D;
-    padding: 12px 25px;
-    margin-left: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+  border: 2px solid #c9a24d;
+  color: #c9a24d;
+  padding: 12px 25px;
+  margin-left: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .btn-outline:hover {
-    background: #C9A24D;
-    color: #0B3D2E;
+  background: #c9a24d;
+  color: #0b3d2e;
 }
-
 
 /* SECTIONS */
 section {
-    padding: 40px 20px;
-    text-align: center;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .courses {
-    background: white;
+  background: white;
 }
 
 .course-box {
-    display: inline-block;
-    background: #3FA46A;
-    color: white;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 6px;
-    width: 220px;
+  display: inline-block;
+  background: #3fa46a;
+  color: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 6px;
+  width: 220px;
 }
 
 /* WHY */
 .why ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .why li {
-    padding: 8px;
+  padding: 8px;
 }
 
 /* FOOTER */
 footer {
-    background: #0B3D2E;
-    color: white;
-    text-align: center;
-    padding: 15px;
+  background: #0b3d2e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact-form form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  height: 100px;
 }
