@@ -148,3 +148,70 @@ footer {
 .whatsapp-btn:hover {
     background: #1ebe5d;
 }
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .header nav {
+        margin-top: 10px;
+    }
+
+    .header nav a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    /* HERO */
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    /* COURSE BOXES */
+    .course-box {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    /* SECTIONS */
+    section {
+        padding: 30px 15px;
+    }
+
+    /* CONTACT FORM */
+    .contact-form form {
+        width: 90%;
+    }
+
+    /* FOOTER */
+    footer p {
+        font-size: 13px;
+    }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp-btn {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
+/* =========================
+   END OF MOBILE RESPONSIVE DESIGN
+========================= */
