@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Enroll Now | Almadni Quranic Academy</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="images/logo.svg"
+        alt="Almadni Quranic Academy Logo"
+        height="50"
+      />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html">Contact</a>
+        <a href="enroll.html">Enroll</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Student Enrollment Form</h2>
+      <p>
+        Please fill out the form below to enroll in Almadni Quranic Academy. We
+        offer a **free trial class** for students of all ages.
+      </p>
+    </section>
+
+    <section class="contact-form">
+      <form action="#" method="post">
+        <input
+          type="text"
+          name="student_name"
+          placeholder="Student Full Name"
+          required
+        />
+
+        <input type="number" name="age" placeholder="Age" required />
+
+        <select name="gender" required>
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+
+        <select name="course" required>
+          <option value="">Select Course</option>
+          <option>Noorani Qaida</option>
+          <option>Quran Reading with Tajweed</option>
+          <option>Hifz-ul-Quran</option>
+          <option>Islamic Studies</option>
+          <option>Arabic Language Basics</option>
+        </select>
+
+        <select name="class_type" required>
+          <option value="">Class Type</option>
+          <option>One-to-One</option>
+          <option>Group Class</option>
+        </select>
+
+        <input
+          type="text"
+          name="parent_name"
+          placeholder="Parent / Guardian Name (if child)"
+        />
+
+        <input
+          type="text"
+          name="whatsapp"
+          placeholder="WhatsApp Number"
+          required
+        />
+
+        <input type="email" name="email" placeholder="Email Address" />
+
+        <textarea
+          name="message"
+          placeholder="Any special requirement or message"
+        ></textarea>
+
+        <button type="submit" class="btn">Submit Enrollment</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 Almadni Quranic Academy | Online Quran Learning Worldwide</p>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/923001234567" class="whatsapp-btn" target="_blank">
+      WhatsApp
+    </a>
+  </body>
+</html>
