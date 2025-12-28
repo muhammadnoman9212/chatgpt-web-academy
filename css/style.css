@@ -306,3 +306,26 @@ footer {
     align-items: center;
   }
 }
+.why-choose {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 25px;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.feature-card h3 {
+  color: #0B3D2E;
+  margin-bottom: 10px;
+}
