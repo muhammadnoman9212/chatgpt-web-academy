@@ -356,3 +356,37 @@ footer {
 .course-card h3 {
   color: #0b3d2e;
 }
+.how-it-works {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.steps-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.step-box {
+  background: white;
+  padding: 22px;
+  border-radius: 8px;
+  max-width: 260px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.testimonials {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 22px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin: 15px auto;
+  max-width: 600px;
+  font-style: italic;
+}
