@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enroll Now | Almadni Quranic Academy</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="images/logo.svg"
+        alt="Almadni Quranic Academy Logo"
+        height="50"
+      />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="enroll.html">Enroll</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section style="text-align: center; padding: 50px 20px">
+      <h1>Enroll in Almadni Quranic Academy</h1>
+      <p>
+        Fill the form below and get started with your Quran learning journey.
+      </p>
+    </section>
+
+    <section class="contact-form">
+      <div id="successMessage" class="success-message">
+        ✅ Thank you! Your enrollment is ready. Redirecting to WhatsApp.
+      </div>
+      <div id="errorMessage" class="error-message">
+        ❌ Please fill all required fields correctly.
+      </div>
+
+      <form id="enrollForm">
+        <input
+          type="text"
+          name="student_name"
+          placeholder="Student Name"
+          required
+        />
+        <input type="number" name="age" placeholder="Age" required />
+        <select name="gender" required>
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+        <select name="course" required>
+          <option value="">Select Course</option>
+          <option>Noorani Qaida</option>
+          <option>Quran with Tajweed</option>
+          <option>Hifz Program</option>
+          <option>Islamic Studies</option>
+          <option>Arabic Basics</option>
+        </select>
+        <select name="class_type" required>
+          <option value="">Class Type</option>
+          <option>One-to-One</option>
+          <option>Group Class</option>
+        </select>
+        <input
+          type="text"
+          name="parent_name"
+          placeholder="Parent/Guardian Name"
+        />
+        <input
+          type="text"
+          name="whatsapp"
+          placeholder="WhatsApp Number"
+          required
+        />
+        <input type="email" name="email" placeholder="Email" />
+        <textarea name="message" placeholder="Additional Notes"></textarea>
+        <button type="submit" class="btn">Submit via WhatsApp</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 Almadni Quranic Academy | Online Quran Learning Worldwide</p>
+    </footer>
+
+    <a href="https://wa.me/923167577929" class="whatsapp-btn" target="_blank"
+      >WhatsApp</a
+    >
+
+    <script>
+      document
+        .getElementById("enrollForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          let studentName = document
+            .querySelector('[name="student_name"]')
+            .value.trim();
+          let age = document.querySelector('[name="age"]').value.trim();
+          let gender = document.querySelector('[name="gender"]').value;
+          let course = document.querySelector('[name="course"]').value;
+          let classType = document.querySelector('[name="class_type"]').value;
+          let whatsapp = document
+            .querySelector('[name="whatsapp"]')
+            .value.trim();
+          let parentName = document
+            .querySelector('[name="parent_name"]')
+            .value.trim();
+          let email = document.querySelector('[name="email"]').value.trim();
+          let message = document.querySelector('[name="message"]').value.trim();
+
+          let successBox = document.getElementById("successMessage");
+          let errorBox = document.getElementById("errorMessage");
+
+          successBox.style.display = "none";
+          errorBox.style.display = "none";
+
+          if (
+            !studentName ||
+            !age ||
+            !gender ||
+            !course ||
+            !classType ||
+            !whatsapp
+          ) {
+            errorBox.style.display = "block";
+            return;
+          }
+          if (!/^[0-9]{10,15}$/.test(whatsapp)) {
+            errorBox.style.display = "block";
+            errorBox.textContent =
+              "❌ Enter valid WhatsApp number (numbers only).";
+            return;
+          }
+
+          successBox.style.display = "block";
+
+          let text = `Enrollment – Almadni Quranic Academy
+Student Name: ${studentName}
+Age: ${age}
+Gender: ${gender}
+Course: ${course}
+Class Type: ${classType}
+Parent/Guardian: ${parentName}
+WhatsApp: ${whatsapp}
+Email: ${email}
+Notes: ${message}`;
+
+          let phoneNumber = "923167577929"; // Replace with your WhatsApp
+          let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+            text
+          )}`;
+
+          setTimeout(() => {
+            window.open(whatsappURL, "_blank");
+            document.getElementById("enrollForm").reset();
+          }, 1500);
+        });
+    </script>
+  </body>
+</html>
