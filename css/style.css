@@ -1,271 +1,81 @@
-body {
+/* =========================
+   GENERAL RESET & BODY
+========================= */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
-  background: #f9f7f3;
-  color: #2b2b2b;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* HEADER */
+body {
+  background: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
   background: #0b3d2e;
   color: white;
-  padding: 18px 15px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  flex-wrap: wrap;
 }
-.header h1 {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  font-size: 28px;
+
+.header img {
+  height: 50px;
 }
 
 .header nav a {
-  color: #c9a24d;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* HERO */
-.hero {
-  padding: 60px 20px;
-  text-align: center;
-  background: #0b3d2e;
   color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.hero h2 {
-  font-family: "Poppins", sans-serif;
-  font-size: 32px;
+.header nav a:hover {
+  text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+/* =========================
+   BUTTONS
+========================= */
 .btn {
   background: #c9a24d;
   color: #0b3d2e;
   padding: 14px 28px;
-  display: inline-block;
-  margin-top: 20px;
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
-  letter-spacing: 0.5px;
-}
-
-.hero-buttons {
-  margin-top: 25px;
-}
-
-.btn-outline {
-  border: 2px solid #c9a24d;
-  color: #c9a24d;
-  padding: 12px 25px;
-  margin-left: 10px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.btn-outline:hover {
-  background: #c9a24d;
-  color: #0b3d2e;
-}
-
-/* SECTIONS */
-section {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-section h2 {
-  font-family: "Poppins", sans-serif;
-  color: #0b3d2e;
-  margin-bottom: 15px;
-}
-
-section p {
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.7;
-  font-size: 15px;
-}
-/* COURSES */
-
-.courses {
-  background: white;
-}
-
-.course-box {
   display: inline-block;
-  background: white;
-  color: #2b2b2b;
-  padding: 20px;
-  margin: 15px;
-  border-radius: 10px;
-  width: 260px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: 0.2s;
 }
 
-.course-box:hover {
-  transform: translateY(-5px);
+.btn:hover {
+  background: #b38f3f;
 }
 
-/* WHY */
-.why ul {
-  list-style: none;
-  padding: 0;
-}
-
-.why li {
-  padding: 8px;
-}
-
-/* FOOTER */
-footer {
-  background: #0b3d2e;
-  color: #eee;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 14px;
-}
-/* CONTACT FORM */
-
-.contact-form form {
-  max-width: 500px;
-  margin: auto;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-.contact-form textarea {
-  height: 100px;
-}
-.contact-form button {
-  background: #c9a24d;
-  color: #0b3d2e;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: medium;
-  cursor: pointer;
-}
-.contact-form button:hover {
-  background: #b18e44;
-}
-.whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-.whatsapp-btn:hover {
-  background: #1ebe5d;
-}
 /* =========================
-   MOBILE RESPONSIVE DESIGN
+   HERO SECTION
 ========================= */
-
-@media (max-width: 768px) {
-  /* HEADER */
-  .header h1 {
-    font-size: 22px;
-  }
-
-  .header nav {
-    margin-top: 10px;
-  }
-
-  .header nav a {
-    display: inline-block;
-    margin: 5px;
-    font-size: 14px;
-  }
-
-  /* HERO */
-  .hero h2 {
-    font-size: 24px;
-  }
-
-  .hero p {
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .hero-buttons a {
-    display: block;
-    margin: 10px auto;
-    width: 80%;
-  }
-
-  /* COURSE BOXES */
-  .course-box {
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  /* SECTIONS */
-  section {
-    padding: 30px 15px;
-  }
-
-  /* CONTACT FORM */
-  .contact-form form {
-    width: 90%;
-  }
-
-  /* FOOTER */
-  footer p {
-    font-size: 13px;
-  }
-
-  /* WHATSAPP BUTTON */
-  .whatsapp-btn {
-    padding: 10px 14px;
-    font-size: 14px;
-  }
-}
-/* =========================
-   END OF MOBILE RESPONSIVE DESIGN
-========================= */
-.success-message {
-  display: none;
-  background: #e6f7ef;
-  color: #0b3d2e;
-  border-left: 5px solid #3fa46a;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-.error-message {
-  display: none;
-  background: #fdecea;
-  color: #a94442;
-  border-left: 5px solid #d9534f;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  font-size: 14px;
-}
 .hero-advanced {
   text-align: center;
   padding: 50px 20px;
@@ -273,14 +83,19 @@ footer {
   color: white;
 }
 
-.hero-advanced .hero-btn {
-  background: #c9a24d;
-  color: #0b3d2e;
-  padding: 15px 30px;
+.hero-advanced h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-advanced p {
   font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.hero-advanced .hero-btn {
   margin-top: 15px;
-  border-radius: 6px;
-  font-weight: bold;
 }
 
 .academy-stats {
@@ -288,24 +103,23 @@ footer {
   justify-content: center;
   gap: 30px;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .stat-box h3 {
   font-size: 28px;
-  margin: 0;
   color: #c9a24d;
+  margin: 0;
 }
 
 .stat-box p {
-  margin: 5px 0 0;
+  margin-top: 5px;
   font-size: 14px;
 }
-@media (max-width: 600px) {
-  .academy-stats {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+
+/* =========================
+   FEATURES / WHY CHOOSE US
+========================= */
 .why-choose {
   padding: 40px 20px;
   text-align: center;
@@ -323,12 +137,21 @@ footer {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
 }
 
 .feature-card h3 {
   color: #0b3d2e;
   margin-bottom: 10px;
 }
+
+/* =========================
+   COURSES
+========================= */
 .courses-advanced {
   padding: 40px 20px;
   text-align: center;
@@ -356,6 +179,10 @@ footer {
 .course-card h3 {
   color: #0b3d2e;
 }
+
+/* =========================
+   HOW IT WORKS
+========================= */
 .how-it-works {
   padding: 40px 20px;
   text-align: center;
@@ -374,8 +201,12 @@ footer {
   padding: 22px;
   border-radius: 8px;
   max-width: 260px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
+
+/* =========================
+   TESTIMONIALS
+========================= */
 .testimonials {
   padding: 40px 20px;
   text-align: center;
@@ -385,52 +216,163 @@ footer {
   background: white;
   padding: 22px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   margin: 15px auto;
   max-width: 600px;
   font-style: italic;
 }
-/* HERO */
-.hero-advanced { text-align:center; padding:50px 20px; background:#0B3D2E; color:white; }
-.hero-advanced .hero-btn { background:#C9A24D; color:#0B3D2E; padding:15px 30px; font-size:18px; margin-top:15px; border-radius:6px; font-weight:bold; text-decoration:none; }
-.academy-stats { display:flex; justify-content:center; gap:30px; margin-top:30px; }
-.stat-box h3 { font-size:28px; color:#C9A24D; margin:0; }
-.stat-box p { margin:5px 0 0; font-size:14px; }
 
-/* FEATURES */
-.why-choose { padding:40px 20px; text-align:center; }
-.features-grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:25px; }
-.feature-card { background:white; padding:20px; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.08); }
-.feature-card h3 { color:#0B3D2E; margin-bottom:10px; }
+/* =========================
+   TEACHERS
+========================= */
+.teachers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+}
 
-/* COURSES */
-.courses-advanced { padding:40px 20px; text-align:center; }
-.courses-grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-top:15px; }
-.course-card { background:white; padding:22px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08); transition:transform 0.2s; }
-.course-card:hover { transform:translateY(-4px); }
-.course-card h3 { color:#0B3D2E; }
+.teacher-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding: 20px;
+  max-width: 220px;
+  transition: transform 0.2s;
+}
 
-/* HOW IT WORKS */
-.how-it-works { padding:40px 20px; text-align:center; }
-.steps-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px; }
-.step-box { background:white; padding:22px; border-radius:8px; max-width:260px; box-shadow:0 4px 10px rgba(0,0,0,0.08); }
+.teacher-card:hover {
+  transform: translateY(-4px);
+}
 
-/* TESTIMONIALS */
-.testimonials { padding:40px 20px; text-align:center; }
-.testimonial-card { background:white; padding:22px; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.08); margin:15px auto; max-width:600px; font-style:italic; }
+.teacher-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
 
-/* BUTTONS */
-.btn { background:#C9A24D; color:#0B3D2E; padding:14px 28px; text-decoration:none; border-radius:30px; font-weight:bold; }
+.teacher-card h3 {
+  color: #0b3d2e;
+  margin-bottom: 6px;
+}
 
-/* WHATSAPP BUTTON */
-.whatsapp-btn { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:12px 18px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 4px 10px rgba(0,0,0,0.2); z-index:1000; }
-.whatsapp-btn:hover { background:#1ebe5d; }
+.teacher-card p {
+  font-size: 14px;
+  color: #555;
+}
 
-/* RESPONSIVE */
-@media(max-width:768px){
-.hero-advanced h1{font-size:24px;}
-.hero-advanced p{font-size:15px;line-height:1.6;}
-.features-grid, .courses-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
-.steps-grid{flex-direction:column;}
-.academy-stats{flex-direction:column;}
+/* =========================
+   CONTACT / ENROLL FORMS
+========================= */
+.contact-form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.contact-form button {
+  width: 100%;
+}
+
+.success-message {
+  display: none;
+  background: #e6f7ef;
+  color: #0b3d2e;
+  border-left: 5px solid #3fa46a;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.error-message {
+  display: none;
+  background: #fdecea;
+  color: #a94442;
+  border-left: 5px solid #d9534f;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #0b3d2e;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+}
+
+/* =========================
+   RESPONSIVE MEDIA
+========================= */
+@media (max-width: 768px) {
+  .hero-advanced h1 {
+    font-size: 24px;
+  }
+  .hero-advanced p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .features-grid,
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .steps-grid {
+    flex-direction: column;
+  }
+  .academy-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .teacher-card {
+    max-width: 100%;
+  }
+  .contact-form {
+    width: 90%;
+    padding: 15px;
+  }
 }
