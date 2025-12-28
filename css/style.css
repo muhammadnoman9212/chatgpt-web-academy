@@ -75,6 +75,20 @@ section {
   text-align: center;
 }
 
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #0B3D2E;
+    margin-bottom: 15px;
+}
+
+section p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 15px;
+}
+/* COURSES */
+
 .courses {
   background: white;
 }
