@@ -269,13 +269,13 @@ footer {
 .hero-advanced {
   text-align: center;
   padding: 50px 20px;
-  background: #0B3D2E;
+  background: #0b3d2e;
   color: white;
 }
 
 .hero-advanced .hero-btn {
-  background: #C9A24D;
-  color: #0B3D2E;
+  background: #c9a24d;
+  color: #0b3d2e;
   padding: 15px 30px;
   font-size: 18px;
   margin-top: 15px;
@@ -293,7 +293,7 @@ footer {
 .stat-box h3 {
   font-size: 28px;
   margin: 0;
-  color: #C9A24D;
+  color: #c9a24d;
 }
 
 .stat-box p {
@@ -322,10 +322,37 @@ footer {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .feature-card h3 {
-  color: #0B3D2E;
+  color: #0b3d2e;
   margin-bottom: 10px;
+}
+.courses-advanced {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.courses-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 15px;
+}
+
+.course-card {
+  background: white;
+  padding: 22px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+}
+
+.course-card h3 {
+  color: #0b3d2e;
 }
