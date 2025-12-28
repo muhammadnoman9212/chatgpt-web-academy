@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #F9F7F3;
+    color: #2B2B2B;
+}
+
+/* HEADER */
+.header {
+    background: #0B3D2E;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.header nav a {
+    color: #C9A24D;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+    background: #0B3D2E;
+    color: white;
+}
+
+.hero h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+}
+
+.btn {
+    background: #C9A24D;
+    color: #0B3D2E;
+    padding: 12px 25px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.courses {
+    background: white;
+}
+
+.course-box {
+    display: inline-block;
+    background: #3FA46A;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 6px;
+    width: 220px;
+}
+
+/* WHY */
+.why ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why li {
+    padding: 8px;
+}
+
+/* FOOTER */
+footer {
+    background: #0B3D2E;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
