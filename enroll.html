@@ -34,15 +34,16 @@
     </section>
 
     <section class="contact-form">
-        <div id="successMessage" class="success-message">
-            ✅ Thank you! Your enrollment details are ready. You’ll be redirected to WhatsApp to send your request.
-        </div>
-        
-        <div id="errorMessage" class="error-message">
-            ❌ Please fill all required fields correctly.
-        </div>
-        
-        <form id="enrollForm">
+      <div id="successMessage" class="success-message">
+        ✅ Thank you! Your enrollment details are ready. You’ll be redirected to
+        WhatsApp to send your request.
+      </div>
+
+      <div id="errorMessage" class="error-message">
+        ❌ Please fill all required fields correctly.
+      </div>
+
+      <form id="enrollForm">
         <input
           type="text"
           name="student_name"
@@ -106,21 +107,63 @@
       WhatsApp
     </a>
     <script>
-        document.getElementById("enrollForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-        
-            let studentName = document.querySelector('[name="student_name"]').value;
-            let age = document.querySelector('[name="age"]').value;
-            let gender = document.querySelector('[name="gender"]').value;
-            let course = document.querySelector('[name="course"]').value;
-            let classType = document.querySelector('[name="class_type"]').value;
-            let parentName = document.querySelector('[name="parent_name"]').value;
-            let whatsapp = document.querySelector('[name="whatsapp"]').value;
-            let email = document.querySelector('[name="email"]').value;
-            let message = document.querySelector('[name="message"]').value;
-        
-            let text =
-        `New Enrollment – Almadni Quranic Academy
+      document
+        .getElementById("enrollForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get fields
+          let studentName = document
+            .querySelector('[name="student_name"]')
+            .value.trim();
+          let age = document.querySelector('[name="age"]').value.trim();
+          let gender = document.querySelector('[name="gender"]').value;
+          let course = document.querySelector('[name="course"]').value;
+          let classType = document.querySelector('[name="class_type"]').value;
+          let whatsapp = document
+            .querySelector('[name="whatsapp"]')
+            .value.trim();
+
+          let parentName = document
+            .querySelector('[name="parent_name"]')
+            .value.trim();
+          let email = document.querySelector('[name="email"]').value.trim();
+          let message = document.querySelector('[name="message"]').value.trim();
+
+          let successBox = document.getElementById("successMessage");
+          let errorBox = document.getElementById("errorMessage");
+
+          // Reset messages
+          successBox.style.display = "none";
+          errorBox.style.display = "none";
+
+          // Basic validation
+          if (
+            studentName === "" ||
+            age === "" ||
+            gender === "" ||
+            course === "" ||
+            classType === "" ||
+            whatsapp === ""
+          ) {
+            errorBox.style.display = "block";
+            errorBox.textContent = "❌ Please fill all required fields.";
+            return;
+          }
+
+          // WhatsApp number validation (simple)
+          if (!/^[0-9]{10,15}$/.test(whatsapp)) {
+            errorBox.style.display = "block";
+            errorBox.textContent =
+              "❌ Please enter a valid WhatsApp number (numbers only).";
+            return;
+          }
+
+          // Show success message
+          successBox.style.display = "block";
+
+          // Prepare WhatsApp message
+          let text = `New Enrollment – Almadni Quranic Academy
         
         Student Name: ${studentName}
         Age: ${age}
@@ -133,14 +176,19 @@
         
         Message:
         ${message}`;
-        
-            let phoneNumber = "923167577929"; // ← REPLACE with your WhatsApp number
-        
-            let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
-        
+
+          let phoneNumber = "923167577929"; // 🔴 Replace with YOUR WhatsApp number
+
+          let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+            text
+          )}`;
+
+          // Delay before redirect for better UX
+          setTimeout(() => {
             window.open(whatsappURL, "_blank");
+            document.getElementById("enrollForm").reset();
+          }, 1500);
         });
-        </script>
-        
+    </script>
   </body>
 </html>
