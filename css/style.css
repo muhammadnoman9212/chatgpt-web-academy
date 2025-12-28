@@ -7,18 +7,17 @@ body {
 
 /* HEADER */
 .header {
-    background: #0B3D2E;
-    color: white;
-    padding: 18px 15px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  background: #0b3d2e;
+  color: white;
+  padding: 18px 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 .header h1 {
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: 28px;
 }
-
 
 .header nav a {
   color: #c9a24d;
@@ -41,15 +40,15 @@ body {
 }
 
 .btn {
-    background: #C9A24D;
-    color: #0B3D2E;
-    padding: 14px 28px;
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+  background: #c9a24d;
+  color: #0b3d2e;
+  padding: 14px 28px;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
 .hero-buttons {
@@ -78,16 +77,16 @@ section {
 }
 
 section h2 {
-    font-family: 'Poppins', sans-serif;
-    color: #0B3D2E;
-    margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #0b3d2e;
+  margin-bottom: 15px;
 }
 
 section p {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.7;
-    font-size: 15px;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+  font-size: 15px;
 }
 /* COURSES */
 
@@ -96,21 +95,20 @@ section p {
 }
 
 .course-box {
-    display: inline-block;
-    background: white;
-    color: #2B2B2B;
-    padding: 20px;
-    margin: 15px;
-    border-radius: 10px;
-    width: 260px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+  display: inline-block;
+  background: white;
+  color: #2b2b2b;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .course-box:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
-
 
 /* WHY */
 .why ul {
@@ -124,11 +122,11 @@ section p {
 
 /* FOOTER */
 footer {
-    background: #0B3D2E;
-    color: #eee;
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 14px;
+  background: #0b3d2e;
+  color: #eee;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
 }
 /* CONTACT FORM */
 
@@ -140,14 +138,13 @@ footer {
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 14px;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
 }
-
 
 .contact-form textarea {
   height: 100px;
@@ -166,85 +163,84 @@ footer {
   background: #b18e44;
 }
 .whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 .whatsapp-btn:hover {
-    background: #1ebe5d;
+  background: #1ebe5d;
 }
 /* =========================
    MOBILE RESPONSIVE DESIGN
 ========================= */
 
 @media (max-width: 768px) {
+  /* HEADER */
+  .header h1 {
+    font-size: 22px;
+  }
 
-    /* HEADER */
-    .header h1 {
-        font-size: 22px;
-    }
+  .header nav {
+    margin-top: 10px;
+  }
 
-    .header nav {
-        margin-top: 10px;
-    }
+  .header nav a {
+    display: inline-block;
+    margin: 5px;
+    font-size: 14px;
+  }
 
-    .header nav a {
-        display: inline-block;
-        margin: 5px;
-        font-size: 14px;
-    }
+  /* HERO */
+  .hero h2 {
+    font-size: 24px;
+  }
 
-    /* HERO */
-    .hero h2 {
-        font-size: 24px;
-    }
+  .hero p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 
-    .hero p {
-        font-size: 15px;
-        line-height: 1.6;
-    }
+  .hero-buttons a {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
 
-    .hero-buttons a {
-        display: block;
-        margin: 10px auto;
-        width: 80%;
-    }
+  /* COURSE BOXES */
+  .course-box {
+    width: 90%;
+    margin: 10px auto;
+  }
 
-    /* COURSE BOXES */
-    .course-box {
-        width: 90%;
-        margin: 10px auto;
-    }
+  /* SECTIONS */
+  section {
+    padding: 30px 15px;
+  }
 
-    /* SECTIONS */
-    section {
-        padding: 30px 15px;
-    }
+  /* CONTACT FORM */
+  .contact-form form {
+    width: 90%;
+  }
 
-    /* CONTACT FORM */
-    .contact-form form {
-        width: 90%;
-    }
+  /* FOOTER */
+  footer p {
+    font-size: 13px;
+  }
 
-    /* FOOTER */
-    footer p {
-        font-size: 13px;
-    }
-
-    /* WHATSAPP BUTTON */
-    .whatsapp-btn {
-        padding: 10px 14px;
-        font-size: 14px;
-    }
+  /* WHATSAPP BUTTON */
+  .whatsapp-btn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
 }
 /* =========================
    END OF MOBILE RESPONSIVE DESIGN
