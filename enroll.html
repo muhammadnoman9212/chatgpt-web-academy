@@ -34,7 +34,7 @@
     </section>
 
     <section class="contact-form">
-      <form action="#" method="post">
+        <form id="enrollForm">
         <input
           type="text"
           name="student_name"
@@ -85,7 +85,7 @@
           placeholder="Any special requirement or message"
         ></textarea>
 
-        <button type="submit" class="btn">Submit Enrollment</button>
+        <button type="submit" class="btn">Submit via WhatsApp</button>
       </form>
     </section>
 
@@ -97,5 +97,42 @@
     <a href="https://wa.me/923001234567" class="whatsapp-btn" target="_blank">
       WhatsApp
     </a>
+    <script>
+        document.getElementById("enrollForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+        
+            let studentName = document.querySelector('[name="student_name"]').value;
+            let age = document.querySelector('[name="age"]').value;
+            let gender = document.querySelector('[name="gender"]').value;
+            let course = document.querySelector('[name="course"]').value;
+            let classType = document.querySelector('[name="class_type"]').value;
+            let parentName = document.querySelector('[name="parent_name"]').value;
+            let whatsapp = document.querySelector('[name="whatsapp"]').value;
+            let email = document.querySelector('[name="email"]').value;
+            let message = document.querySelector('[name="message"]').value;
+        
+            let text =
+        `New Enrollment – Almadni Quranic Academy
+        
+        Student Name: ${studentName}
+        Age: ${age}
+        Gender: ${gender}
+        Course: ${course}
+        Class Type: ${classType}
+        Parent/Guardian: ${parentName}
+        WhatsApp: ${whatsapp}
+        Email: ${email}
+        
+        Message:
+        ${message}`;
+        
+            let phoneNumber = "923167577929"; // ← REPLACE with your WhatsApp number
+        
+            let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+        
+            window.open(whatsappURL, "_blank");
+        });
+        </script>
+        
   </body>
 </html>
