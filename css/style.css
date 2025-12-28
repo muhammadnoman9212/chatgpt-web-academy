@@ -43,6 +43,25 @@ body {
     border-radius: 5px;
     font-weight: bold;
 }
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.btn-outline {
+    border: 2px solid #C9A24D;
+    color: #C9A24D;
+    padding: 12px 25px;
+    margin-left: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-outline:hover {
+    background: #C9A24D;
+    color: #0B3D2E;
+}
+
 
 /* SECTIONS */
 section {
