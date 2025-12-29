@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <title>Contact Us | Almadni Quranic Academy</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -26,7 +28,7 @@
     </section>
 
     <section class="contact-form">
-      <form>
+      <form id="contactForm">
         <input type="text" placeholder="Full Name" required />
         <input type="number" placeholder="Age" required />
         <input type="text" placeholder="WhatsApp Number" required />
@@ -54,8 +56,43 @@
       <p>© 2025 Almadni Quranic Academy | Online Quran Learning</p>
     </footer>
     <a href="https://wa.me/923167577929" class="whatsapp-btn" target="_blank">
-        WhatsApp
+      WhatsApp
     </a>
-    
+    <script>
+      (function () {
+        emailjs.init("YOUR_PUBLIC_KEY");
+      })();
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (grecaptcha.getResponse() === "") {
+            alert("Please verify reCAPTCHA");
+            return;
+          }
+
+          document.getElementById("contactLoader").style.display = "block";
+
+          emailjs.send("YOUR_SERVICE_ID", "contact_confirmation", {
+            name: this.querySelector('input[placeholder="Full Name"]').value,
+            email: this.querySelector('input[type="email"]').value,
+            message: this.querySelector("textarea").value,
+          });
+
+          emailjs
+            .send("YOUR_SERVICE_ID", "academy_notification", {
+              name: this.querySelector('input[placeholder="Full Name"]').value,
+              email: this.querySelector('input[type="email"]').value,
+            })
+            .then(() => {
+              document.getElementById("contactLoader").style.display = "none";
+              alert("Thank you! Your message has been sent.");
+              this.reset();
+              grecaptcha.reset();
+            });
+        });
+    </script>
   </body>
 </html>
